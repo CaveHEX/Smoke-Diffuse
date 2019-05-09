@@ -9,7 +9,7 @@ class Agents {
   void build() {
     agents = new ArrayList<Agent>();
 
-    int steps = 30000;
+    int steps = 50000;
     float step = TWO_PI / steps;
     float rad = 300;
     float amp = PI/8;
@@ -19,7 +19,8 @@ class Agents {
       agents.add(new Agent(
         new PVector(cos(a), sin(a)).mult(rad).add(center).add(PVector.random2D().mult(20)), 
         a + PI/2 + PI/8 + random(-amp, amp),
-        pal.col((sin(a)+1)*0.5)
+        //pal.col((sin(a)+1)*0.5)
+        color(255)
         ));
     }
   }
